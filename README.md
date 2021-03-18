@@ -15,9 +15,9 @@ to allow a network manager to know the status of the IoT network analyzed in a c
 
 
 ## What you need:
--Linux distribution (We have test it with Ubuntu).
--Need to install:
-  -Elasticsearch: https://www.elastic.co/es/downloads/elasticsearch
-  -Logstash: https://www.elastic.co/es/downloads/logstash
-  -Grafana: https://grafana.com/grafana/download
+- Linux distribution (We have test it with Ubuntu).
+- Need to install:
+  - Elasticsearch: https://www.elastic.co/es/downloads/elasticsearch  
+  - Logstash: https://www.elastic.co/es/downloads/logstash  
+  - Grafana: https://grafana.com/grafana/download
 
