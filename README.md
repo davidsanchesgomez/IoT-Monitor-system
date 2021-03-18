@@ -12,3 +12,12 @@ to allow a network manager to know the status of the IoT network analyzed in a c
 - Once we have that we can take them to the database, in our case Elasticsearch, using Logstash.
   - For that we execute ./bin/logstash -g logstash_mqtt(coap).conf
 - After that we can visualice the data from Grafana importing the json models
+
+
+## What you need:
+-Linux distribution (We have test it with Ubuntu).
+-Need to install:
+  -Elasticsearch: https://www.elastic.co/es/downloads/elasticsearch
+  -Logstash: https://www.elastic.co/es/downloads/logstash
+  -Grafana: https://grafana.com/grafana/download
+
