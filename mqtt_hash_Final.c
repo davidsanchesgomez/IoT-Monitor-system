@@ -1,6 +1,6 @@
 /********************************************************
 * MQTT pcap reader and parser                           *
-* Start date: 5/08/2020		                            *
+* Start date: 5/08/2020		                        *
 * Author: David Sanches Gómez                           *
 * Compila: gcc -Wall -o mqtt mqtt.c -lpcap              *
 *********************************************************/
@@ -11,6 +11,8 @@
 #include <string.h>
 #include <getopt.h>
 #include <time.h>
+#include <stdint.h>
+#include <arpa/inet.h>
 /*****************Constants definitions*****************/
 #define PACK_READ 1
 #define TRACE_END -2
@@ -295,10 +297,10 @@ void printlist(node *n,  FILE *f){
 	for(n1=n; n1!=NULL; n1=n1->next){
 		fprintf(f,"%d;", n1->id);
 		
-		truct tm  ts;
+		struct tm  ts;
 		char       buf[80];
 		const time_t bar = n1->init_time;
-    	ts = *localtime((&bar));
+    		ts = *localtime((&bar));
 
 		strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", &ts);
 		fprintf(f,"%s;", buf);
@@ -321,7 +323,7 @@ void printlist(node *n,  FILE *f){
 			fprintf(f,"%d;", n1->message_identifier);
 		}
 
-		printf(f,"%d;", n1->return_code);
+		fprintf(f,"%d;", n1->return_code);
 		
 		
 		fprintf(f,"%s;", n1->topic);
