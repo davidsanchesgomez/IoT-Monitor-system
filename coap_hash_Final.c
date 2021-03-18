@@ -1,6 +1,6 @@
 /********************************************************
 * COAP pcap reader and parser                           *
-* Start date: 19/09/2020		                        *
+* Start date: 19/09/2020		                *
 * Author: David Sanches Gómez                           *
 * Compila: gcc -Wall -o coap coap.c -lpcap              *
 *********************************************************/
@@ -11,6 +11,8 @@
 #include <string.h>
 #include <getopt.h>
 #include <time.h>
+#include <stdint.h>
+#include <arpa/inet.h>
 /*****************Constants definitions*****************/
 #define PACK_READ 1
 #define TRACE_END -2
